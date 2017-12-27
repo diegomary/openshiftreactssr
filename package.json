@@ -1,0 +1,43 @@
+{
+  "name": "react-universal-simplest",
+  "version": "1.0.1",
+  "description": "A very basic boilerplate for Starting Universal SSR with React",
+  "main": "server.js",
+  "scripts": {
+    "dev": "npm run bundle && npm run devbabel ",
+    "bundle": "webpack",
+    "devbabel": "nodemon --exec  babel-node ./server.js --presets react",
+    "start": "node del.js && node copy.js && npm run prodbabel",
+    "prodbabel": "babel ./ -d ./dist --ignore ./node_modules --presets react && webpack && node dist/server.js",
+    "bundle-prod": "webpack "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegomary/openshiftgim.git"
+  },
+  "author": "Diego Aldo Burlando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegomary/openshiftgim/issues"
+  },
+  "homepage": "https://github.com/diegomary/openshiftgim#readme",
+  "dependencies": {
+    "copy": "^0.3.1",
+    "del": "^3.0.0",
+    "es6-promise": "^4.1.1",
+    "express": "^4.16.2",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
+    "webpack": "^3.10.0"
+  }
+}

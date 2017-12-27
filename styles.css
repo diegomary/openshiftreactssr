@@ -1,0 +1,387 @@
+body {
+  padding:0;
+  margin:0;
+}
+.aboutContainer {
+  padding-top:5em;
+  background: linear-gradient(to left, #ffffff 50%, #191919 50%);
+  font-family: 'Open Sans', sans-serif; 
+  height:1300px;
+}
+
+.aboutContainer:before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:500px;
+  background: linear-gradient(to left, #7dedff 50%, orange 50%);
+}
+
+.aboutContainer >h1 {
+  
+  width:8em;
+  text-align:center;
+  font-size:4em;
+  
+  margin:0.5em auto;
+  position:relative;
+  text-transform: uppercase;
+  background-image: -webkit-linear-gradient(left, white 50%, black 50%); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, white 50%, black 50%); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, white 50%, black 50%); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, white 50%, black 50%); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, white 50%, black 50%); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+.aboutContainer >h1:after { 
+position:absolute;
+content:'';
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color:rgba(255,255,255,0.4);
+box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.peopleContainer {
+  display:flex;
+  position:relative;
+}
+
+.peopleContainer > section {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:50%;
+  padding: 1em 2em 3em 2em;
+  box-sizing:border-box;
+}   
+
+.diegoContainer {
+  background: linear-gradient(to top , #191919 60%, orange );
+  color:white;
+}
+.diegoContainer > .flame > div:first-of-type{
+  background-image:url('./images/diego.jpg');
+  background-color:#ff4a00;
+  width:150px;
+  height:150px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  border-radius:50%;
+  position:relative;
+  z-index:3;
+}
+
+.diegoContainer > hr {
+  border:none;
+  height:3px;
+  background:linear-gradient(to left, rgba(0,0,0,0), #ff4a00, rgba(0,0,0,0));
+  width:60%;
+}
+.mariaContainer > .flame > div:first-of-type{
+  background-image:url('./images/maria2.jpg');
+  background-color:#007aff;
+  width:150px;
+  height:150px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  border-radius:50%;
+  z-index:3;
+  position:relative;
+  
+}
+.mariaContainer > hr {
+  border:none;
+  height:3px;
+  background:linear-gradient(to left, rgba(0,0,0,0), #007aff, rgba(0,0,0,0));
+  width:60%;
+}
+
+.mariaContainer { 
+background: linear-gradient(to top, white 60%, #7AEDFF);
+}
+.peopleContainer > section > p {
+  text-align:justify;
+  padding:1em 0;
+  margin:0;
+  line-height: 1.5;
+  font-size:15px;
+}
+.peopleContainer > section > p:first-of-type {
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
+.peopleContainer > section > h3 {
+  font-size:1.8em;
+  margin:0;
+  padding:0.5em 0;
+  text-align:center;
+}
+.peopleContainer > section > ul {
+  list-style-type: none;
+  text-align:center;
+  padding:0;
+  margin:0;
+}
+
+.peopleContainer > section > ul > li {
+  text-transform: uppercase;
+}
+
+.flame {  
+  margin: 0 auto;
+  position:relative;  
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  
+  
+}
+
+.diegoContainer > .flame {
+  box-shadow: 0 0 7px #FFEE58, 0 0 15px 5px #fc4900;
+}
+
+.mariaContainer > .flame {
+  box-shadow: 0 0 7px #d9f9ff, 0 0 15px 5px #077eff;
+}
+
+.flame > div:nth-of-type(2) {
+  position:absolute;
+  border-radius:50%;
+  z-index:1;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  
+}
+
+.diegoContainer > .flame > div:nth-of-type(2) {
+  animation: flameBeforeDiego  3s infinite;
+}
+
+.mariaContainer > .flame > div:nth-of-type(2) {
+  animation: flameBeforeMaria  3s infinite;
+}
+
+.flame > div:nth-of-type(2):before {
+  position:absolute;
+  border-radius:50%;
+  z-index:1;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  
+}
+
+.diegoContainer > .flame > div:nth-of-type(2):before {
+  animation: flameAfterDiego  1.8s infinite;
+}
+
+.mariaContainer > .flame > div:nth-of-type(2):before {
+  animation: flameAfterMaria  1.8s infinite;
+}
+
+.flame > div:nth-of-type(2):after {
+  position:absolute;
+  border-radius:50%;
+  z-index:1;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  
+}
+
+.diegoContainer > .flame > div:nth-of-type(2):after  {
+  animation: flameBeforeDiego  3.5s infinite;
+}
+
+.mariaContainer > .flame > div:nth-of-type(2):after  {
+  animation: flameBeforeMaria  3.5s infinite;
+}
+
+.flame:before {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  content:'';
+  z-index:1;
+  
+ 
+}
+
+.diegoContainer > .flame:before {
+   animation: flameBeforeDiego  1.5s infinite;
+}
+
+.mariaContainer > .flame:before {
+   animation: flameBeforeMaria  1.5s infinite;
+}
+
+.flame:after {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  content:'';
+  z-index:1;
+  
+  
+}
+
+.diegoContainer > .flame:after {
+  animation: flameAfterDiego 2.5s infinite;
+}
+
+.mariaContainer > .flame:after {
+  animation: flameAfterMaria 2.5s infinite;
+}
+
+@keyframes flameAfterDiego {
+  0% {
+  box-shadow: 0 0 10px 3px #F9A825, 0 0 18px 8px #FF3D00;
+  transform:scaleY(0.9) rotate(0deg);
+  }
+  25% {
+  box-shadow: 0 0 10px 3px #F9A825, 0 0 18px 8px #FF3D00;
+  transform:scaleY(0.7) scaleX(0.8) rotate(70deg);
+  }
+  50% {
+  box-shadow: 0 0 10px 3px #F9A825, 0 0 18px 8px #DD2C00;
+  transform:scaleY(0.7) scaleX(1) rotate(120deg);
+  }
+  75% {
+  box-shadow: 0 0 10px 3px #F9A825,  0 0 18px 8px #DD2C00;
+  transform:scaleY(0.7) scaleX(0.8) rotate(190deg);
+  }
+  100% {
+  box-shadow: 0 0 10px 3px #F9A825, 0 0 18px 8px #FF3D00;
+  transform:scaleY(0.9) rotate(360deg);
+  }
+}
+
+@keyframes flameBeforeDiego {
+  0% {
+  box-shadow:0 0 10px 3px #F9A825, 0 0 18px 8px #FF3D00;
+  transform:scaleX(0.9) rotate(0deg);
+  }
+  25% {
+  box-shadow:0 0 10px 3px #F9A825, 0 0 18px 8px #FF3D00;
+  transform:scaleX(0.7) scaleY(0.8) rotate(50deg);
+  }
+  50% {
+  box-shadow:0 0 10px 3px #F9A825, 0 0 18px 8px #DD2C00;
+  transform:scaleX(0.7) scaleY(1) rotate(110deg);
+  }
+  75% {
+  box-shadow:0 0 10px 3px #F9A825, 0 0 18px 8px #DD2C00;
+  transform:scaleX(0.7) scaleY(0.8) rotate(170deg);
+  }
+  100% {
+  box-shadow: 0 0 10px 3px #F9A825, 0 0 18px 8px #FF3D00;
+  transform:scaleX(0.9) rotate(360deg);
+  }
+}
+
+
+@keyframes flameAfterMaria {
+  0% {
+  box-shadow: 0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleY(0.9) rotate(0deg);
+  }
+  25% {
+  box-shadow: 0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleY(0.7) scaleX(0.8) rotate(70deg);
+  }
+  50% {
+  box-shadow: 0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleY(0.7) scaleX(1) rotate(120deg);
+  }
+  75% {
+  box-shadow: 0 0 10px 3px #d3e4ff,  0 0 18px 8px #0072ff;
+  transform:scaleY(0.7) scaleX(0.8) rotate(190deg);
+  }
+  100% {
+  box-shadow: 0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleY(0.9) rotate(360deg);
+  }
+}
+
+@keyframes flameBeforeMaria {
+  0% {
+  box-shadow:0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleX(0.9) rotate(0deg);
+  }
+  25% {
+  box-shadow:0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleX(0.7) scaleY(0.8) rotate(50deg);
+  }
+  50% {
+  box-shadow:0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleX(0.7) scaleY(1) rotate(110deg);
+  }
+  75% {
+  box-shadow:0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleX(0.7) scaleY(0.8) rotate(170deg);
+  }
+  100% {
+  box-shadow: 0 0 10px 3px #d3e4ff, 0 0 18px 8px #0072ff;
+  transform:scaleX(0.9) rotate(360deg);
+  }
+}
+
+
+@media (max-width:700px) {
+
+  .aboutContainer {
+  padding-top:5em;
+  background: white;
+}
+
+.aboutContainer >h1:after { 
+display:none;
+}
+
+.aboutContainer >h1 {
+  
+  
+  
+  font-size:2em;    
+  background-image: none;
+    background-image:none;
+    background-image:  none;
+    background-image:  none;
+    background-image: none;
+    color:initial;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+
+}
+
+.peopleContainer {
+  flex-direction:column;
+}
+
+.peopleContainer > section {
+  width:100%;
+}
+
+}
+
