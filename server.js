@@ -13,7 +13,6 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
 app.use(express.static(__dirname + '/public'));
 console.log(__dirname)
 
-
 app.get('/', (req, res) => {   
 	res.send(`
     <!doctype html>
